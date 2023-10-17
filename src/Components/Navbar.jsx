@@ -10,7 +10,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-blue-500">
                 <div className="navbar-start md:hidden">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost ">
@@ -22,11 +22,10 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-center md:navbar-start">
-                    <img src="" alt="" />
-                    <p className="text-2xl font-lobster">Gadget Galaxy</p>
+                    <img className="w-52" src="/logo.png" alt="" />
                 </div>
                 <div className="navbar-center hidden md:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 text-xl font-semibold text-white">
                         {links}
                     </ul>
                 </div>

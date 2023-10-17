@@ -1,13 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import { useContext } from "react";
 
 
 const Navbar = () => {
+    let { user, Logout } = useContext(AuthContext)
     let links = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/addProduct'>Add Product</NavLink></li>
-        <li><NavLink to='/myCart'>My Cart</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
+        {
+            user && <>
+                <li><NavLink to='/addProduct'>Add Product</NavLink></li>
+                <li><NavLink to='/myCart'>My Cart</NavLink></li>
+            </>
+        }
     </>
+    let handleLogout = () => {
+        Logout()
+            .then()
+            .catch()
+    }
+
     return (
         <div>
             <div className="navbar bg-blue-500">
@@ -30,7 +42,26 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ? <>
+                            <div className="flex gap-4 items-center">
+                                <p className="text-xl font-bold hidden md:inline-block">{user.displayName}</p>
+                                <div className="dropdown dropdown-end">
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 rounded-full">
+                                            <img src={user.photoURL} />
+                                        </div>
+                                    </label>
+                                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box bg-slate-300">
+                                        <li><p className="text-sm md:hidden">{user.displayName}</p></li>
+                                        <li><Link to='/profile'>Profile</Link></li>
+                                        <li><button onClick={handleLogout}>Logout</button></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </> : <Link className="bg-green-600 px-3 py-2 rounded-md text-white" to='/login'>Login</Link>
+                    }
                 </div>
             </div>
         </div>

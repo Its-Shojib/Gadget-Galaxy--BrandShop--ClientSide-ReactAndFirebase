@@ -23,7 +23,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-blue-500">
+            <div className="navbar bg-blue-500 font-lobster">
                 <div className="navbar-start md:hidden">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost ">
@@ -38,7 +38,7 @@ const Navbar = () => {
                     <img className="w-52" src="/logo.png" alt="" />
                 </div>
                 <div className="navbar-center hidden md:flex">
-                    <ul className="menu menu-horizontal px-1 text-lg font-semibold text-white">
+                    <ul className="menu menu-horizontal px-1 text-lg font-semibold text-black">
                         {links}
                     </ul>
                 </div>

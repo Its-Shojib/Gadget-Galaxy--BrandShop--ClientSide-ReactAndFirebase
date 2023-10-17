@@ -11,6 +11,7 @@ const Navbar = () => {
             user && <>
                 <li><NavLink to='/addProduct'>Add Product</NavLink></li>
                 <li><NavLink to='/myCart'>My Cart</NavLink></li>
+                <li><NavLink to='/profile'>Profile</NavLink></li>
             </>
         }
     </>
@@ -37,7 +38,7 @@ const Navbar = () => {
                     <img className="w-52" src="/logo.png" alt="" />
                 </div>
                 <div className="navbar-center hidden md:flex">
-                    <ul className="menu menu-horizontal px-1 text-xl font-semibold text-white">
+                    <ul className="menu menu-horizontal px-1 text-lg font-semibold text-white">
                         {links}
                     </ul>
                 </div>

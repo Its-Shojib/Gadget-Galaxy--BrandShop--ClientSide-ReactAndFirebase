@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import { Pagination, Autoplay, FreeMode, Scrollbar } from 'swiper/modules';
 
 
-const Slider = () => {
+const CustomerReview = () => {
     return (
         <div className='my-10 '>
             <h2 className='text-center text-5xl font-bold'>Our <span className='text-rose-800'>Customer</span> Reviews</h2>
@@ -43,7 +43,7 @@ const Slider = () => {
                 >
                     <SwiperSlide>
                         <div className="card bg-base-100 shadow-xl space-y-5 ">
-                            <p className='text-lg font-medium px-4'> I absolutely love this tech shop for its extensive range of products. Whether I am in the market for the latest Apple gadgets, powerful Intel processors, sleek Samsung smartphones, robust Microsoft software, cutting-edge OnePlus devices, or innovative Google products, this store has it all. Its a one-stop-shop for all my tech needs, and I appreciate the convenience it offers.</p>
+                            <p className='text-lg font-medium px-4'> I absolutely love this tech shop for its extensive range of products. Whether I am in the market for the latest Apple gadgets, powerful Intel processors, sleek Samsung smartphones, robust Microsoft software, cutting-edge OnePlus devices, this store has it all.</p>
                             <div className='flex  items-center gap-3'>
                                 <img src="/member1.png" alt="Shoes" className="rounded-full w-20" />
                                 <h3 className='text-xl font-bold'>Md Shojib Hossain</h3>
@@ -71,7 +71,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="card bg-base-100 shadow-xl space-y-5 ">
                             <p className='text-lg font-medium px-4'> The shops commitment to customer satisfaction doesnt end with the sale. They offer reliable warranties and excellent after-sales support for products. Its reassuring to know that if I encounter any issues, I am in good hands.
-                            Well-Organized Store Layout: The store is thoughtfully organized, making it easy to find what I am looking for. Whether I am after accessories, software, or the latest gadgets, the layout ensures a smooth shopping experience.</p>
+                            </p>
                             <div className='flex  items-center gap-3'>
                                 <img src="/member4.png" alt="Shoes" className="rounded-full w-20" />
                                 <h3 className='text-xl font-bold'>Mst Asha Khatun</h3>
@@ -89,18 +89,26 @@ const Slider = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="card bg-base-100 shadow-xl space-y-5 ">
-                            <p className='text-lg font-medium px-4'>The store is thoughtfully organized, making it easy to find what I am looking for. Whether I am after accessories, software, or the latest gadgets, the layout ensures a smooth shopping experience.</p>
+                            <p className='text-lg font-medium px-4'>The store is thoughtfully organized, making it easy to find. Whether I am after accessories, software, or the latest gadgets, the layout ensures a smooth shopping experience.Its a one-stop-shop for all my tech needs, and I appreciate the convenience it offers.</p>
                             <div className='flex  items-center gap-3'>
                                 <img src="/member2.png" alt="Shoes" className="rounded-full w-20" />
                                 <h3 className='text-xl font-bold'>Lucky Khatun</h3>
                             </div>
                         </div>
                     </SwiperSlide>
-
+                    <SwiperSlide>
+                        <div className="card bg-base-100  shadow-xl space-y-5 ">
+                            <p className='text-lg font-medium px-4'> Well-Organized Store Layout: The store is thoughtfully organized, making it easy to find what I am looking for. Whether I am after accessories, software, or the latest gadgets, the layout ensures a smooth shopping experience what I am looking for.</p>
+                            <div className='flex  items-center gap-3'>
+                                <img src="/member3.png" alt="Shoes" className="rounded-full w-20" />
+                                <h3 className='text-xl font-bold'>Aowal Hossain</h3>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </div >
     );
 };
 
-export default Slider;
+export default CustomerReview;

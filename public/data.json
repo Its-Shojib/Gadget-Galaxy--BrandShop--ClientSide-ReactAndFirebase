@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brand_name": "Apple",
+      "img": "https://i.imgur.com/6Qd80Rn.png"
+    },
+    {
+      "id": 2,
+      "brand_name": "Google",
+      "img": "https://i.imgur.com/fCC7KpK.png"
+    },
+    {
+      "id": 3,
+      "brand_name": "Intel",
+      "img": "https://i.imgur.com/65X3k6h.jpg"
+    },
+    {
+      "id": 4,
+      "brand_name": "Microsoft",
+      "img": "https://i.imgur.com/Qe0rmFo.jpg"
+    },
+    {
+      "id": 5,
+      "brand_name": "One-Plus",
+      "img": "https://i.imgur.com/OIQCdu1.jpg"
+    },
+    {
+      "id": 6,
+      "brand_name": "SamSung",
+      "img": "https://i.imgur.com/CaDaYiy.jpg"
+    }
+  ]
+  

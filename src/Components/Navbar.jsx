@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
+import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
         {
             user && <>
                 <li><NavLink to='/addProduct'>Add Product</NavLink></li>
-                <li><NavLink to='/myCart'>My Cart</NavLink></li>
+                <li><NavLink to='/myCart'><AiOutlineShoppingCart/>My Cart</NavLink></li>
                 <li><NavLink to='/profile'>Profile</NavLink></li>
             </>
         }

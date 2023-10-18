@@ -1,8 +1,12 @@
+import { useLoaderData } from "react-router-dom";
+import Banner from "../Components/Banner";
 
 const Home = () => {
+    let brands = useLoaderData();
+    console.log(brands);
     return (
         <div>
-            <p>This is home</p>
+            <Banner></Banner>
         </div>
     );
 };

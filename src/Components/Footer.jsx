@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
             <div className="footer p-5 bg-black text-white font-rancho text-xl">
                 <Link to='/'>
-                    <img className="w-56" src="/public/logo.png" alt="" />
+                    <img className="w-56" src="/logo.png" alt="" />
                     <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
                 </Link>
                 <nav>

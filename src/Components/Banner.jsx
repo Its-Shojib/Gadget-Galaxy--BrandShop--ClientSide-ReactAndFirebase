@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 
 const Banner = () => {
     return (
-        <div className='h-[500px] w-full mt-20'>
+        <div className='h-[500px] w-full z-0'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -23,12 +23,12 @@ const Banner = () => {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><img className='h-[500px] w-full' src="/public/b1.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[500px] w-full' src="/public/b2.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[500px] w-full' src="/public/b3.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[500px] w-full' src="/public/b4.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[500px] w-full' src="/public/b5.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[500px] w-full' src="/public/b6.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='h-[500px] w-full' src="/b1.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='h-[500px] w-full' src="/b2.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='h-[500px] w-full' src="/b3.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='h-[500px] w-full' src="/b4.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='h-[500px] w-full' src="/b5.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className='h-[500px] w-full' src="/b6.jpg" alt="" /></SwiperSlide>
 
             </Swiper>
         </div>

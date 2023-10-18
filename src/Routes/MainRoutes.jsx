@@ -13,6 +13,7 @@ import Intel from "../Pages/Intel";
 import Microsoft from "../Pages/Microsoft";
 import OnePlus from "../Pages/OnePlus";
 import Samsung from "../Pages/Samsung";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addProduct",
-                element: <AddProduct></AddProduct>,
+                element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>, 
             },
             {
                 path: "/myCart",
-                element: <MyCart></MyCart>,
+                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
             },
             {
                 path: "/login",
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/profile",
-                element: <Profile></Profile>,
+                element: <PrivateRoutes><Profile></Profile></PrivateRoutes>,
             },
             {
                 path: "/product/1",

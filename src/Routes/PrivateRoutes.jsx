@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { AuthContext } from "../Provider/AuthProvider";
 
 
-const PrivateRoute = ({ children }) => {
+const PrivateRoutes = ({ children }) => {
     let { user, loading } = useContext(AuthContext);
     let location = useLocation();
     if (loading) {
@@ -17,7 +17,7 @@ const PrivateRoute = ({ children }) => {
     }
     return <Navigate state={location.pathname} to='/login'></Navigate>
 };
-PrivateRoute.propTypes = {
+PrivateRoutes.propTypes = {
     children: PropTypes.node,
 }
-export default PrivateRoute;
+export default PrivateRoutes;

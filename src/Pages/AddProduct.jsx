@@ -15,6 +15,7 @@ const AddProduct = () => {
         let details = form.details.value;
         let rating = form.rating.value;
         let img = form.img.value;
+        console.log(name, brand, type, price, details, rating, img)
         let product = { name, brand, type, price, details, rating, img }
 
         // Send data to server
@@ -59,7 +60,14 @@ const AddProduct = () => {
                             </div>
                             <div className='flex-1'>
                                 <p className='text-xl'>Brand Name</p>
-                                <input className="w-full p-2" type="text" name="brand" id="" placeholder='Enter brand name' />
+                                <select className='w-full p-2' name="brand" id="">
+                                    <option value="apple">Apple</option>
+                                    <option value="google">Google</option>
+                                    <option value="intel">Intel</option>
+                                    <option value="samsung">SamSung</option>
+                                    <option value="oneplus">One-Plus</option>
+                                    <option value="microsoft">Microsoft</option>
+                                </select>
                             </div>
                         </div>
                         <div className='flex flex-col md:flex-row gap-10 mb-5'>

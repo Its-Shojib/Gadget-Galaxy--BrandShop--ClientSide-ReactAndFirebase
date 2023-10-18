@@ -2,32 +2,32 @@
     {
       "id": 1,
       "brand_name": "Apple",
-      "img": "https://i.imgur.com/6Qd80Rn.png"
+      "img": "https://i.ibb.co/8dXW28q/Apple.png"
     },
     {
       "id": 2,
       "brand_name": "Google",
-      "img": "https://i.imgur.com/fCC7KpK.png"
+      "img": "https://i.ibb.co/V0F076N/google.jpg"
     },
     {
       "id": 3,
       "brand_name": "Intel",
-      "img": "https://i.imgur.com/65X3k6h.jpg"
+      "img": "https://i.ibb.co/hCZ027p/Intel.jpg"
     },
     {
       "id": 4,
       "brand_name": "Microsoft",
-      "img": "https://i.imgur.com/Qe0rmFo.jpg"
+      "img": "https://i.ibb.co/JsbLgdB/Ms.jpg"
     },
     {
       "id": 5,
       "brand_name": "One-Plus",
-      "img": "https://i.imgur.com/OIQCdu1.jpg"
+      "img": "https://i.ibb.co/ZxQT5pK/OnePlus.jpg"
     },
     {
       "id": 6,
       "brand_name": "SamSung",
-      "img": "https://i.imgur.com/CaDaYiy.jpg"
+      "img": "https://i.ibb.co/bW0m96W/Samsung.jpg"
     }
   ]
   

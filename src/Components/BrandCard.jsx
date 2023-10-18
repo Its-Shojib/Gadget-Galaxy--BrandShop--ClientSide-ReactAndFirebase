@@ -4,7 +4,7 @@ const BrandCard = ({ brand }) => {
     let { id, brand_name, img } = brand;
     return (
         <div>
-            <Link to={`/product/${id}`}>
+            <Link to={`/${id}`}>
                 <div className="card bg-violet-300 h-[400px]">
                     <figure >
                         <img src={img} alt="brands img" className="w-full h-[300px]" />

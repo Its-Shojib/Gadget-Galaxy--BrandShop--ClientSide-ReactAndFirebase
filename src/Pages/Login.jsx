@@ -23,22 +23,40 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 e.target.reset();
-                Swal.fire('SweetAlert2 is working!')
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Login Successfully',
+                    icon: 'Success',
+                    confirmButtonText: 'Cool'
+                })
                 navigate(location.state ? location.state : '/');
             })
             .catch(error => {
-                Swal("Error!", error.message, "error");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                  })
             })
     }
     let handleGoogleLogin = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
-                Swal("Good job!", "Sign-in Successfuly!", "success");
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Login Successfully',
+                    icon: 'Success',
+                    confirmButtonText: 'Cool'
+                })
                 navigate(location.state ? location.state : '/');
             })
             .catch(error => {
-                Swal("Error!", error.message, "error");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                  })
             })
 
     }
@@ -46,11 +64,20 @@ const Login = () => {
         githubSignIn()
             .then(result => {
                 console.log(result.user);
-                Swal("Good job!", "Sign-in Successfuly!", "success");
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Login Successfully',
+                    icon: 'Success',
+                    confirmButtonText: 'Cool'
+                })
                 navigate(location.state ? location.state : '/');
             })
             .catch(error => {
-                Swal("Error!", error.message, "error");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                  })
             })
     }
 

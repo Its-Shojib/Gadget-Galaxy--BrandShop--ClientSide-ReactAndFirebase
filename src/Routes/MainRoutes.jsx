@@ -14,21 +14,22 @@ import Microsoft from "../Pages/Microsoft";
 import OnePlus from "../Pages/OnePlus";
 import Samsung from "../Pages/Samsung";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateProduct from "../Pages/UpdateProduct";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
         errorElement: <Error></Error>,
-        children:[
+        children: [
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: ()=> fetch('/data.json')
+                loader: () => fetch('/data.json')
             },
             {
                 path: "/addProduct",
-                element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>, 
+                element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>,
             },
             {
                 path: "/myCart",
@@ -47,34 +48,39 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes><Profile></Profile></PrivateRoutes>,
             },
             {
-                path: "/product/1",
+                path: "/apple",
                 element: <Apple></Apple>,
-                loader: ()=> fetch('http://localhost:5000/product/apple')
+                loader: () => fetch('http://localhost:5000/product/apple')
             },
             {
-                path: "/product/2",
+                path: "/google",
                 element: <Google></Google>,
-                loader: ()=> fetch('http://localhost:5000/product/google')
+                loader: () => fetch('http://localhost:5000/product/google')
             },
             {
-                path: "/product/3",
+                path: "/intel",
                 element: <Intel></Intel>,
-                loader: ()=> fetch('http://localhost:5000/product/intel')
+                loader: () => fetch('http://localhost:5000/product/intel')
             },
             {
-                path: "/product/4",
+                path: "/microsoft",
                 element: <Microsoft></Microsoft>,
-                loader: ()=> fetch('http://localhost:5000/product/microsoft')
+                loader: () => fetch('http://localhost:5000/product/microsoft')
             },
             {
-                path: "/product/5",
+                path: "/oneplus",
                 element: <OnePlus></OnePlus>,
-                loader: ()=> fetch('http://localhost:5000/product/oneplus')
+                loader: () => fetch('http://localhost:5000/product/oneplus')
             },
             {
-                path: "/product/6",
+                path: "/samsung",
                 element: <Samsung></Samsung>,
-                loader: ()=> fetch('http://localhost:5000/product/samsung')
+                loader: () => fetch('http://localhost:5000/product/samsung')
+            },
+            {
+                path: "/updateProduct/:id",
+                element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
             },
 
         ]

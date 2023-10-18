@@ -23,30 +23,49 @@ const Register = () => {
         let password = e.target.password.value;
 
         if (password.length < 6) {
-            Swal.fire('SweetAlert2 is working!')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Password must be more than 6 character',
+              })
             return;
         }
         else if (!/[A-Z]/.test(password)) {
-            Swal.fire('SweetAlert2 is working!')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Password must at-least one Capital letter',
+              })
             return;
         }
         // eslint-disable-next-line no-useless-escape
         else if (!/.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-].*/.test(password)) {
-            Swal.fire('SweetAlert2 is working!')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Password must at-least one Special Charecter',
+              })
             return;
         }
 
 
         createUser(email, password)
-            .then(result => {
-                console.log(result.user);
-                Swal.fire('SweetAlert2 is working!')
+            .then(() => {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Created Successfully',
+                    icon: 'Success',
+                    confirmButtonText: 'Cool'
+                })
                 e.target.reset();
                 navigate('/')
             })
             .catch(error => {
-                console.log(error);
-                Swal.fire('SweetAlert2 is working!')
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                  })
             })
 
         
@@ -55,12 +74,20 @@ const Register = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
-                Swal.fire('SweetAlert2 is working!')
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Created Successfully',
+                    icon: 'Success',
+                    confirmButtonText: 'Cool'
+                })
                 navigate('/')
             })
             .catch(error => {
-                console.log(error);
-                Swal.fire('SweetAlert2 is working!')
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                  })
             })
 
     }
@@ -68,12 +95,20 @@ const Register = () => {
         githubSignIn()
             .then(result => {
                 console.log(result.user);
-                Swal.fire('SweetAlert2 is working!')
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Created Successfully',
+                    icon: 'Success',
+                    confirmButtonText: 'Cool'
+                })
                 navigate('/')
             })
             .catch(error => {
-                console.log(error);
-                Swal.fire('SweetAlert2 is working!')
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                  })
             })
 
     }

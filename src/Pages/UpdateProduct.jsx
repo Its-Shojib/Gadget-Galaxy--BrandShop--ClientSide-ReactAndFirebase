@@ -7,7 +7,7 @@ const UpdateProduct = () => {
 
     let navigate = useNavigate()
     let product = useLoaderData();
-    let { _id, name, type, price, details, rating, img } = product;
+    let { _id, name,brand, type, price, details, rating, img } = product;
 
     let handleUpdateProduct = e => {
         e.preventDefault();
@@ -64,7 +64,7 @@ const UpdateProduct = () => {
                                 </div>
                                 <div className='flex-1'>
                                     <p className='text-xl'>Brand Name</p>
-                                    <select className='w-full p-2' name="brand" id="">
+                                    <select className='w-full p-2' defaultValue={brand} name="brand" id="">
                                         <option value="apple">Apple</option>
                                         <option value="google">Google</option>
                                         <option value="intel">Intel</option>

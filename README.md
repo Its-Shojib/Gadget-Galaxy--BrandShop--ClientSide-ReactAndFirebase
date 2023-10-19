@@ -1,8 +1,8 @@
-# [Gadget Galaxy](https://lighthearted-pavlova-d0c9c0.netlify.app)
+# [Gadget Galaxy](https://gadget-galaxy-8b55a.web.app/)
 
 
 # Live Link: 
-   **https://lighthearted-pavlova-d0c9c0.netlify.app**
+   **https://gadget-galaxy-8b55a.web.app/**
 # The Features are:
 
 * **Full-Stack Project:** This Project is full-stack Project.

@@ -7,7 +7,7 @@ const UpdateProduct = () => {
 
     let navigate = useNavigate()
     let product = useLoaderData();
-    let { _id, name,brand, type, price, details, rating, img } = product;
+    let { _id, name, brand, type, price, details, rating, img } = product;
 
     let handleUpdateProduct = e => {
         e.preventDefault();
@@ -22,7 +22,7 @@ const UpdateProduct = () => {
         let updatedProduct = { name, brand, type, price, details, rating, img }
 
         // Send data to server
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://brand-shop-server-fhe28h1vd.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

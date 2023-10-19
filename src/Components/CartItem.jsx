@@ -17,7 +17,7 @@ const CartItem = ({ cartItem, myCart, setMyCart }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://brand-shop-server-fhe28h1vd.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -43,8 +43,8 @@ const CartItem = ({ cartItem, myCart, setMyCart }) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Name: {name}</h2>
                 <div className='flex items-center gap-10'>
-                <p>Brand: {brand}</p>
-                <p>Price: {price}</p>
+                    <p>Brand: {brand}</p>
+                    <p>Price: {price}</p>
                 </div>
                 <div className="card-actions mt-3">
                     <button onClick={() => handleDelete(_id)} className="mx-auto block px-4 py-2 text-white rounded-md bg-red-500 text-xl">Delete <AiFillDelete className='inline' /></button>

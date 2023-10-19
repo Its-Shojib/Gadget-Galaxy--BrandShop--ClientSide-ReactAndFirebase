@@ -6,10 +6,10 @@ const ProductDetails = () => {
     let { _id, name, brand, type, price, details, rating, img } = product;
 
     let handleAddToCart = (_id) => {
-        let cart = {_id, name, brand, type, price, details, rating, img }
+        let cart = { _id, name, brand, type, price, details, rating, img }
 
         // Send data to server
-        fetch('http://localhost:5000/cart', {
+        fetch('https://brand-shop-server-fhe28h1vd.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

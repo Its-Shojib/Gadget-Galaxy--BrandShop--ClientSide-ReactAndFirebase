@@ -58,7 +58,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end z-[999]">
-                    <div className="pr-3 text-white">
+                    <div className="text-white">
                         <label className="swap swap-rotate">
 
                             <input 

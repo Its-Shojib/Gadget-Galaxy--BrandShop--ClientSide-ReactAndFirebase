@@ -57,7 +57,7 @@ const router = createBrowserRouter([
             {
                 path: "/google",
                 element: <Google></Google>,
-                loader: () => fetch('http://localhost:5000/product/google')
+                // loader: () => fetch('http://localhost:5000/product/google')
             },
             {
                 path: "/intel",

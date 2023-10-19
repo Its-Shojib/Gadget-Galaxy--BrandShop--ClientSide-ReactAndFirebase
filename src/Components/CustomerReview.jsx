@@ -13,7 +13,7 @@ import { Pagination, Autoplay, FreeMode, Scrollbar } from 'swiper/modules';
 const CustomerReview = () => {
     return (
         <div className='my-10 '>
-            <h2 className='text-center text-3xl md:text-5xl font-bold'>Our <span className='text-rose-800'>Customer</span> Reviews</h2>
+            <h2 className='text-center text-3xl md:text-5xl font-bold'><span className='text-rose-800'>Customer</span> Reviews</h2>
             <div className='bg-gradient-to-r from-purple-400 to-lime-300 rounded-lg my-10 py-5 px-4'>
                 <Swiper
                     slidesPerView={'1'}

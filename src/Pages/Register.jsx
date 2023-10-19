@@ -7,6 +7,8 @@ import { useContext, useState } from "react";
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Provider/AuthProvider';
+import { updateProfile } from 'firebase/auth'
+import auth from "../Firebase/Firebase.config";
 
 
 const Register = () => {
@@ -17,8 +19,8 @@ const Register = () => {
     let navigate = useNavigate()
     let handleCreateUser = (e) => {
         e.preventDefault();
-        // let myname = e.target.name.value;
-        // let myphoto = e.target.image.value;
+        let myname = e.target.name.value;
+        let myphoto = e.target.image.value;
         let email = e.target.email.value;
         let password = e.target.password.value;
 
@@ -27,7 +29,7 @@ const Register = () => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Password must be more than 6 character',
-              })
+            })
             return;
         }
         else if (!/[A-Z]/.test(password)) {
@@ -35,7 +37,7 @@ const Register = () => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Password must at-least one Capital letter',
-              })
+            })
             return;
         }
         // eslint-disable-next-line no-useless-escape
@@ -44,20 +46,25 @@ const Register = () => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Password must at-least one Special Charecter',
-              })
+            })
             return;
         }
 
 
         createUser(email, password)
             .then(() => {
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'User Created Successfully',
-                    icon: 'Success',
-                    confirmButtonText: 'Cool'
+                updateProfile(auth.currentUser, {
+                    displayName: myname, photoURL: myphoto
                 })
-                e.target.reset();
+                    .then(() => {
+                        location.reload();
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'User Created Successfully',
+                            icon: 'Success',
+                            confirmButtonText: 'Cool'
+                        })
+                    })
                 navigate('/')
             })
             .catch(error => {
@@ -65,10 +72,10 @@ const Register = () => {
                     icon: 'error',
                     title: 'Oops...',
                     text: `${error.message}`,
-                  })
+                })
             })
 
-        
+
     }
     let handleGoogleLogin = () => {
         googleSignIn()
@@ -87,7 +94,7 @@ const Register = () => {
                     icon: 'error',
                     title: 'Oops...',
                     text: `${error.message}`,
-                  })
+                })
             })
 
     }
@@ -108,7 +115,7 @@ const Register = () => {
                     icon: 'error',
                     title: 'Oops...',
                     text: `${error.message}`,
-                  })
+                })
             })
 
     }

@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const BrandCard = ({ brand }) => {
     let { id, brand_name, img } = brand;
     return (
-        <div>
+        <div data-aos="zoom-in-up">
             <Link to={`/${id}`}>
                 <div className="card bg-violet-300 h-[400px]">
                     <figure >

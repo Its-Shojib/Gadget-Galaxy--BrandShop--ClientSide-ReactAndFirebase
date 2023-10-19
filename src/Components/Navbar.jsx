@@ -49,8 +49,7 @@ const Navbar = () => {
                                         </div>
                                     </label>
                                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box bg-slate-300">
-                                        <li><Link to='/profile'>Profile</Link></li>
-                                        <li><p className="font-semibold">{user.displayName}</p></li>
+                                        <li><Link to='/profile'>{user.displayName}</Link></li>
                                         <li><button className="md:hidden" onClick={handleLogout}>Logout</button></li>
                                     </ul>
                                 </div>

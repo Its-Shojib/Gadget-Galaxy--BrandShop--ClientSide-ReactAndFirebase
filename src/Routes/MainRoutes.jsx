@@ -15,6 +15,7 @@ import OnePlus from "../Pages/OnePlus";
 import Samsung from "../Pages/Samsung";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateProduct from "../Pages/UpdateProduct";
+import ProductDetails from "../Pages/ProductDetails";
 
 const router = createBrowserRouter([
     {
@@ -80,6 +81,11 @@ const router = createBrowserRouter([
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: "/productDetails/:id",
+                element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
             },
 

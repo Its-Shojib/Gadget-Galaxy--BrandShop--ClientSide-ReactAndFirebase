@@ -8,7 +8,6 @@ const UpdateProduct = () => {
     let navigate = useNavigate()
     let product = useLoaderData();
     let { _id, name, type, price, details, rating, img } = product;
-    console.log(price);
 
     let handleUpdateProduct = e => {
         e.preventDefault();
@@ -36,7 +35,7 @@ const UpdateProduct = () => {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Product Updated Successfully',
-                        icon: 'Success',
+                        icon: 'success',
                         confirmButtonText: 'Cool'
                     })
                     navigate('/')

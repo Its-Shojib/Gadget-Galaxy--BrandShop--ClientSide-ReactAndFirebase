@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             {
                 path: "/myCart",
                 element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/cart')
+                loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/cart')
             },
             {
                 path: "/login",
@@ -52,42 +52,42 @@ const router = createBrowserRouter([
             {
                 path: "/apple",
                 element: <Apple></Apple>,
-                loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/product/apple')
+                loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/product/apple')
             },
             {
                 path: "/google",
                 element: <Google></Google>,
-                // loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/product/google')
+                // loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/product/google')
             },
             {
                 path: "/intel",
                 element: <Intel></Intel>,
-                loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/product/intel')
+                loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/product/intel')
             },
             {
                 path: "/microsoft",
                 element: <Microsoft></Microsoft>,
-                loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/product/microsoft')
+                loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/product/microsoft')
             },
             {
                 path: "/oneplus",
                 element: <OnePlus></OnePlus>,
-                loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/product/oneplus')
+                loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/product/oneplus')
             },
             {
                 path: "/samsung",
                 element: <Samsung></Samsung>,
-                loader: () => fetch('https://brand-shop-server-fhe28h1vd.vercel.app/product/samsung')
+                loader: () => fetch('https://brand-shop-server-8efm9746y.vercel.app/product/samsung')
             },
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-fhe28h1vd.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-8efm9746y.vercel.app/product/${params.id}`)
             },
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-fhe28h1vd.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-8efm9746y.vercel.app/product/${params.id}`)
             },
 
         ]

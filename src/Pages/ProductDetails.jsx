@@ -9,7 +9,7 @@ const ProductDetails = () => {
         let cart = { _id, name, brand, type, price, details, rating, img }
 
         // Send data to server
-        fetch('https://brand-shop-server-fhe28h1vd.vercel.app/cart', {
+        fetch('https://brand-shop-server-8efm9746y.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

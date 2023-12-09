@@ -21,4 +21,4 @@
   
 # Technology Used:
 
-* **React Js , Node Js, MongoDB, Express Js, Firebase, Tailwind**
+* **React Js , Node Js, MongoDB, Express Js, Firebase, Tailwind** 

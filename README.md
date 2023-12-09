@@ -18,3 +18,7 @@
 * **Custommer Review:** You can see the custommer review with automatic slider in home page.
 * **Dynamic Login-Logout:** If you just view our website you will find only home and login pages... 
 * **Profile Page:** You can see your cute face on our website profile pages if you log in to our site.😁
+  
+# Technology Used:
+
+* **React Js , Node Js, MongoDB, Express Js, Firebase, Tailwind**
